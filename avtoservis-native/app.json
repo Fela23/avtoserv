@@ -1,4 +1,64 @@
 {
-  "name": "avtoservis-app",
-  "displayName": "Автосервис"
+  "extends": "expo",
+  "plugins": [
+    "expo-router",
+    [
+      "expo-notifications",
+      {
+        "icon": "./assets/images/notification-icon.png",
+        "color": "#2563EB"
+      }
+    ],
+    [
+      "expo-image-picker",
+      {
+        "photosPermission": "Приложение нуждается в доступе к фото для загрузки изображений автомобиля."
+      }
+    ],
+    [
+      "expo-local-authentication",
+      {
+        "faceIDPermission": "Разрешить использование FaceID для быстрого входа?"
+      }
+    ]
+  ],
+  "scheme": "avtoservis",
+  "name": "Автосервис",
+  "android": {
+    "package": "com.avtoservis.app",
+    "adaptiveIcon": {
+      "foregroundImage": "./assets/images/adaptive-icon.png",
+      "backgroundColor": "#2563EB"
+    },
+    "permissions": [
+      "CAMERA",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "RECEIVE_BOOT_COMPLETED",
+      "VIBRATE"
+    ]
+  },
+  "ios": {
+    "bundleIdentifier": "com.avtoservis.app",
+    "supportsTablet": true,
+    "infoPlist": {
+      "NSFaceIDUsageDescription": "Приложение использует FaceID для быстрого входа.",
+      "NSCameraUsageDescription": "Приложение нуждается в доступе к камере для фотографирования автомобиля.",
+      "NSPhotoLibraryUsageDescription": "Приложение нуждается в доступе к фото для загрузки изображений автомобиля."
+    }
+  },
+  "web": {
+    "bundler": "metro",
+    "output": "static",
+    "favicon": "./assets/images/favicon.png"
+  },
+  "extra": {
+    "router": {
+      "origin": false
+    },
+    "eas": {
+      "projectId": "your-project-id"
+    }
+  },
+  "owner": "avtoservis"
 }
