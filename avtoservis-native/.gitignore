@@ -1,51 +1,17 @@
-# Dependencies
 node_modules/
-
-# Bundle artifact
-*.jsbundle
-
-# CocoaPods
-ios/Pods/
-
-# Xcode
-xcuserdata/
-DerivedData/
-*.hmap
-*.ipa
-*.dSYM.zip
-*.dSYM
-
-# Android
-android/app/build/
-android/.gradle/
-android/captures/
-*.jks
-*.keystore
-
-# Metro
-.metro-health-check*
-
-# Testing
-coverage/
-
-# Debug
+.expo/
+.expo-shared/
+dist/
 npm-debug.*
-yarn-debug.*
-yarn-error.*
-
-# Local env files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# TypeScript
-*.tsbuildinfo
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
 .DS_Store
+*.log
+.env
+coverage/
+.husky/
